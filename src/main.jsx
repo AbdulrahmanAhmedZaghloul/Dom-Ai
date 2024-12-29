@@ -4,16 +4,18 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './routers/routes'
 import { HelmetProvider } from 'react-helmet-async'
+import SnackbarProvider from './context/SnackbarContext'
 // import SnackbarProvider from '../src/context/snackbarContext.jsx'
-import SnackbarProvider from './context/snackbarContext.jsx'
+// import SnackbarProvider from './context/SnackbarContext'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <HelmetProvider>
-      <SnackbarProvider>
+    <SnackbarProvider>
+      <HelmetProvider>
         <RouterProvider router={router}></RouterProvider>
-      </SnackbarProvider>
-    </HelmetProvider>
+      </HelmetProvider>
+    </SnackbarProvider>
+
   </StrictMode>
-   ,
+  ,
 )
