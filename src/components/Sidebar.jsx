@@ -1,11 +1,9 @@
 import React from 'react'
-// import { Logo } from './Logo'
 import { ExtendedFab, IconBtn } from './Button'
 import { NavLink, useLoaderData, useParams, useSubmit } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { motion } from 'motion/react';
 import { deleteConversation } from '../utils/deleteConversation'
-// import { Conversation } from '../pages/conversation'
 
 export const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
 
