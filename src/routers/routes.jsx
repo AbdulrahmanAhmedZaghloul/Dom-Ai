@@ -24,7 +24,7 @@ import resetLinkLoaders from "./loaders/resetLinkLoaders";
 import resetPasswordLoaders from "./loaders/resetPasswordLoaders";
 import appLoader from "./loaders/appLoader";
 import appAction from "./actions/appAction";
-import { Conversation } from "../pages/conversation";
+import { Conversation } from "../pages/Conversation";
 import { conversationLoader } from "./loaders/conversationLoader";
 import conversationAction from "./actions/conversationAction";
 import resetPassword from "./actions/resetPassword";
