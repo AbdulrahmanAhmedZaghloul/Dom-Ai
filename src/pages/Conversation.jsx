@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import React from 'react'
-import PageTitle from '../components/pageTitle'
+import PageTitle from '../components/PageTitle'
 import { useLoaderData, useLocation } from 'react-router-dom'
 import UserPrompt from '../components/UserPrompt'
 import { AiResponse } from '../components/AiResponse'

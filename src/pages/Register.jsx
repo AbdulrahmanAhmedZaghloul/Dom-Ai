@@ -5,7 +5,7 @@ import {  banner } from '../assets/assets'
 /**
 *components 
  */
-import PageTitle from '../components/pageTitle'
+import PageTitle from '../components/PageTitle'
 import TextField from '../components/TextField'
 import {Button} from '../components/Button'
 import { CircularProgress, LinearProgress } from '../components/Progress'

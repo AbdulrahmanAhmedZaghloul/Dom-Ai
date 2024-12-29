@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import React from 'react'
 import { useLoaderData } from 'react-router-dom'
-import { Conversation } from './conversation';
+import { Conversation } from './Conversation';
 import { usePromptPreloader } from '../hooks/usePromptPreloader';
 import { PromptPreloader } from '../components/PromptPreloader';
 
