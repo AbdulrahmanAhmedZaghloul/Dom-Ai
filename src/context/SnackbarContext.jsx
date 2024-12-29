@@ -10,6 +10,11 @@ const initialCtxValue = {
         message: '',
         type: 'info',
     },
+    showSnacKbar: ({
+        timeOut= 5000,
+        message,
+        type= 'info',
+    }) => { },
     hideSnacKbar: () => { },
 };
 export const SnackbarContext = createContext(initialCtxValue);
@@ -24,24 +29,46 @@ const SnackbarProvider = ({ children }) => {
 
     const timeoutRef = useRef();
 
-    const showSnacKbar = useCallback(({ message, type = 'info', timeOut = 5000 }) => {
+    // const showSnacKbar = useCallback(({ message, type = 'info', timeOut = 5000 }) => {
+    //     if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    //     setSnackbar({open:true , message ,type });
+    //     timeoutRef.current = setTimeout(()=>{
+    //         setSnackbar((prev)=>{
+    //             return {...prev, open:false}
+    //         });
+    //     },timeOut);
+    // },[]);
+
+
+    const showSnackbar = useCallback(({ message, type = 'info', timeOut = 5000 }) => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
-        setSnackbar({open:true , message ,type });
-        timeoutRef.current = setTimeout(()=>{
-            setSnackbar((prev)=>{
-                return {...prev, open:false}
+        setSnackbar({ open: true, message, type });
+        timeoutRef.current = setTimeout(() => {
+            setSnackbar((prev) => {
+                return { ...prev, open: false };
             });
-        },timeOut);
-    },[]);
-
-    const hideSnacKbar = useCallback(() => {
+        }, timeOut);
+    }, []);
+    
+    const hideSnackbar = useCallback(() => {
         if (timeoutRef.current) clearTimeout(timeoutRef.current);
-        setSnackbar({open:false , message:'' ,type:'info' });
-    },[]);
-
+        setSnackbar({ open: false, message: '', type: 'info' });
+    }, []);
+    
     const contextValue = useMemo(() => {
-        return { showSnacKbar, hideSnacKbar };
-    }, [showSnacKbar, hideSnacKbar]);
+        return { showSnackbar, hideSnackbar };
+    }, [showSnackbar, hideSnackbar]);
+    
+
+
+    // const hideSnacKbar = useCallback(() => {
+    //     if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    //     setSnackbar({open:false , message:'' ,type:'info' });
+    // },[]);
+
+    // const contextValue = useMemo(() => {
+    //     return { showSnacKbar, hideSnacKbar };
+    // }, [showSnacKbar, hideSnacKbar]);
 
     return (
         <SnackbarContext.Provider value={contextValue}>

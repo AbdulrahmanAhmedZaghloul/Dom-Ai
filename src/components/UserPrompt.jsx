@@ -7,11 +7,8 @@ import { IconBtn } from './Button';
 const UserPrompt = ({ text }) => {
     const { user } = useLoaderData();
     const [isExpanded, toggleExpand] = useToggle()
-
     const textBoxRef = useRef();
-
     const [hasMoreContent, setMoreContent] = useState(false)
-
     useEffect(() => {
         setMoreContent(
             textBoxRef.current.scrollHeight > textBoxRef.current.clientHeight,
@@ -40,27 +37,6 @@ const UserPrompt = ({ text }) => {
         }
     </div>
 </React.Fragment>
-
-        // <React.Fragment>
-        //     <div className="grid grid-col-1 items-start gap-1 py-4 
-        //     md:grid-cols-[max-content,minmax(0,1fr),max-content] md:gap-5">
-        //         <Avatar name={user?.name} />
-        //         <p className={`text-bodyLarge pt-1 whitespace-pre-wrap ${!isExpanded ? 'line-clamp-4' : ''} `}>
-        //             {text}
-        //         </p>
-        //         {
-        //             hasMoreContent && (
-        //                 <IconBtn
-        //                     onclick={toggleExpand}
-        //                     icon={isExpanded ? 'keyboard_arrow_up' : 'keyboard_arrow_down'}
-        //                     title={isExpanded ? 'Collapse text' : 'Expand text'}
-        //                     ref={textBoxRef}
-        //                 />
-        //             )
-        //         }
-
-        //     </div>
-        // </React.Fragment>
     )
 };
 

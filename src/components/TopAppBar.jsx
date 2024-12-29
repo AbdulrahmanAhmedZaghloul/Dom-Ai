@@ -7,7 +7,6 @@ import { MenuItem } from './MenuItem'
 import { AnimatePresence } from 'motion/react'
 import { useToggle } from '../hooks/useToggle'
 import logout from '../utils/logout'
-// import { Logo } from './Logo'
 import PropTypes from 'prop-types'
 import { deleteConversation } from '../utils/deleteConversation'
 
@@ -73,9 +72,6 @@ const TopAppBar = ({ toggleSidebar }) => {
                                 <div className="absolute h-[1px] top-3/4 w-[80%] left-2 right-16 bg-light-primary dark:bg-dark-primary animate-loading" />
                             </div>
                         </div>
-
-                        // <LinearProgress classes='absolute top-full left-0 right-0 z-10' />
-
                     )}
                 </AnimatePresence>
             </header>

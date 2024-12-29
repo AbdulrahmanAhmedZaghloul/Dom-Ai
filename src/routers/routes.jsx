@@ -1,16 +1,7 @@
 import {  createHashRouter } from "react-router-dom";
-//  componet //  
 
 import App from "../App";
 import Register from "../pages/Register";
-
-
-// Actions //
-
-
-
-
-// Actions //
 
 import registerActions from "./actions/registerActions";
 import Login from "../pages/Login";

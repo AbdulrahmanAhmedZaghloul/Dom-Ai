@@ -4,14 +4,10 @@ import { NavLink, useLoaderData, useParams, useSubmit } from 'react-router-dom'
 import PropTypes from 'prop-types'
 import { motion } from 'motion/react';
 import { deleteConversation } from '../utils/deleteConversation'
-
 export const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
-
     const { conversations: { documents: conversationData } } = useLoaderData() || {};
-
     const submit = useSubmit();
     const {conversationId} = useParams();
-
     return (
         <React.Fragment>
             <motion.div
@@ -94,14 +90,6 @@ export const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                     </div> */}
                 </div>
             </motion.div>
-
-            {/* <div 
-            className={`overlay ${isSidebarOpen ? 'active' : ''}`}
-                onClick={toggleSidebar}
-            >
-              
-            </div> */}
-            
         </React.Fragment>
     )
 }

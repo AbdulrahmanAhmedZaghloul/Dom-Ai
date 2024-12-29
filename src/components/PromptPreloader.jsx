@@ -9,7 +9,6 @@ export const PromptPreloader = ({ promptValue }) => {
             <UserPrompt text={promptValue}/>
             <AiResponse>
             <Skeleton>
-
             </Skeleton>
             </AiResponse>
         </div>
