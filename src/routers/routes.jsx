@@ -12,7 +12,7 @@ import Register from "../pages/Register";
 
 // Actions //
 
-import registerActions from "./actions/RegisterActions";
+import registerActions from "./actions/registerActions";
 import Login from "../pages/Login";
 import loginActions from "./actions/loginActions";
 import registerLoaders from "./loaders/registerLoaders";
