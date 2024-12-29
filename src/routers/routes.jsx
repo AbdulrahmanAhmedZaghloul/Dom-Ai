@@ -1,4 +1,4 @@
-import { createBrowserRouter } from "react-router-dom";
+import {  createHashRouter } from "react-router-dom";
 //  componet //  
 
 import App from "../App";
@@ -32,7 +32,7 @@ import { ConversationError } from "../pages/ConversationError";
 import { RootError } from "../pages/RootError";
 
 
-const router = createBrowserRouter([
+const router = createHashRouter([
     { path: '/', 
         element: <App /> ,
         action:appAction,
