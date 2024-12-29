@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 import './index.css'
-import PageTitle from './components/pageTitle'
+import PageTitle from './components/PageTitle'
 import TopAppBar from './components/TopAppBar'
 import { Sidebar } from './components/Sidebar'
 import { useToggle } from './hooks/useToggle'
