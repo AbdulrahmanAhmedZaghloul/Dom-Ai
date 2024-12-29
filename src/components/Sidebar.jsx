@@ -97,12 +97,12 @@ export const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                 </div>
             </motion.div>
 
-            <div 
+            {/* <div 
             className={`overlay ${isSidebarOpen ? 'active' : ''}`}
                 onClick={toggleSidebar}
             >
               
-            </div>
+            </div> */}
             
         </React.Fragment>
     )
