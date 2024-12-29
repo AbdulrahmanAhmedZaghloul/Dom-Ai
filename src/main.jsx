@@ -4,8 +4,8 @@ import './index.css'
 import { RouterProvider } from 'react-router-dom'
 import router from './routers/routes'
 import { HelmetProvider } from 'react-helmet-async'
-import SnackbarProvider from '../src/context/snackbarContext.jsx'
-// import SnackbarProvider from './context/snackbarContext'
+// import SnackbarProvider from '../src/context/snackbarContext.jsx'
+import SnackbarProvider from './context/snackbarContext.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
