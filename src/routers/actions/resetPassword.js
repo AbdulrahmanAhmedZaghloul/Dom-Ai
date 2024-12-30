@@ -19,8 +19,6 @@ const resetPassword = async ({ request }) => {
             message:err.message
         }
     }
-
-
 }
 
 export default resetPassword
