@@ -16,16 +16,16 @@ import { Logo } from '../components/Logo'
 function Login() {
     const navigation = useNavigation();
     const error = useActionData();
-    const { showSnacKbar } = useSnackbar();
+    const { showSnackbar } = useSnackbar();
     useEffect(() => {
         if (error?.message) {
-            showSnacKbar({
+            showSnackbar({
                 message: error.message,
                 type: 'error',
                 timeOut: Infinity
             })
         }
-    }, [error, showSnacKbar])
+    }, [error, showSnackbar])
 
     return (
         <React.Fragment>

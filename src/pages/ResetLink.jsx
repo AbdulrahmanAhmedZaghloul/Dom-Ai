@@ -16,17 +16,17 @@ function ResetLink() {
     const navigation = useNavigation();
     const actionDate = useActionData();
 
-    const { showSnacKbar } = useSnackbar();
+    const { showSnackbar } = useSnackbar();
 
     useEffect(() => {
         if (actionDate) {
-            showSnacKbar({
+            showSnackbar({
                 message: actionDate?.message,
                 type: actionDate.ok ? 'info' : 'error',
                 timeOut: 8000,
             });
         }
-    }, [actionDate, showSnacKbar])
+    }, [actionDate, showSnackbar])
 
     return (
         <React.Fragment>

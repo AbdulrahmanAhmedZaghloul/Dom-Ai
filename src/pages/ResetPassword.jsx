@@ -16,13 +16,13 @@ function ResetPassword() {
     const navigation = useNavigation();
     const error = useActionData();
     
-    const { showSnacKbar } = useSnackbar();
+    const { showSnackbar } = useSnackbar();
 
     useEffect(() => {
         if (error?.message) {
-            showSnacKbar({ message: error.message, type: 'error' })
+            showSnackbar({ message: error.message, type: 'error' })
         }
-    }, [error, showSnacKbar])
+    }, [error, showSnackbar])
 
     return (
         <React.Fragment>

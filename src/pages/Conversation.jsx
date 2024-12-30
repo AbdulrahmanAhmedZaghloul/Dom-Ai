@@ -14,9 +14,6 @@ export const Conversation = () => {
     const { title = "", chats = [] } = conversation;
     const { promptPreloaderValue } = usePromptPreloader();
     const location = useLocation();
-
-    console.log({ title, chats });
-
     return (
         <React.Fragment>
             <PageTitle title={`${title} chat Ai`} />
