@@ -7,7 +7,7 @@ import { deleteConversation } from '../utils/deleteConversation'
 export const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
     const { conversations: { documents: conversationData } } = useLoaderData() || {};
     const submit = useSubmit();
-    const {conversationId} = useParams();
+    const { conversationId } = useParams();
     return (
         <React.Fragment>
             <motion.div
@@ -16,18 +16,13 @@ export const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                 transition={{ duration: 0.2, ease: 'easeOut' }}
                 className={`sidebar ${isSidebarOpen ? 'active' : ''}`}>
                 <div className="sidebar-inner">
-                    {/* <div className="h-16 grid items-center px-8 mb-">
-                        <Logo />
-                    </div> */}
-                           <ExtendedFab
+                    <ExtendedFab
                         classes='lg:mt-4 md:mt-20 sm:mt-20 mt-20'
                         href='/'
                         text='New chat'
                         onClick={toggleSidebar}
                         disabled={!conversationId}
                     />
-
-                
                     <div className="overflow-y-auto -me-2 pe-1 mt-10">
                         <p className="text-titleSmall h-9 grid items-center px-4">Recent</p>
                         <nav className="">
@@ -71,23 +66,7 @@ export const Sidebar = ({ isSidebarOpen, toggleSidebar }) => {
                             )}
                         </nav>
                     </div>
-                    {/* <div className=' 
-                    mt-4 
-                    h-14 
-                    px-4 
-                    lg:grid 
-                    items-center 
-                    text-labelLarge 
-                  text-light-onSurfaceVariant
-                  dark:text-dark-onSurfaceVariant 
-                    border-t
-                  border-light-surfaceContainerHigh
-                  dark:border-dark-surfaceContainerHigh
-                    truncate
-                    hidden
-                    '>
-                        &copy; 2024 code with chat
-                    </div> */}
+                  
                 </div>
             </motion.div>
         </React.Fragment>

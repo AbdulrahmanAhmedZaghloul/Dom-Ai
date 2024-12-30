@@ -38,23 +38,6 @@ export const AiResponse = ({ aiResponse, children }) => {
             console.log(err);
         }
     }, [showSnacKbar, hideSnacKbar]);
-    
-    // const handleCopy = useCallback(async (text) => {
-    //     if (hideSnackbar) hideSnackbar();
-    //     try {
-    //         await navigator.clipboard.writeText(text);
-    //         showSnackbar({
-    //             message: 'Copied to clipboard',
-    //             timeOut: 2500,
-    //         })
-    //     } catch (err) {
-    //         showSnackbar({
-    //             message: err.message
-    //         })
-    //         console.log(err);
-    //     }
-    // }, [showSnackbar, hideSnackbar])
-
 
     const code = ({ children, className, ...rest }) => {
         const match = className?.match(/language-(\w+)/)

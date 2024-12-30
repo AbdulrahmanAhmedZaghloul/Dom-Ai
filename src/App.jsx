@@ -17,7 +17,7 @@ function App() {
   const navigation = useNavigation();
   const actionData = useActionData();
   const [isSidebarOpen, toggleSidebar] = useToggle();
-  const { showSnacKbar } = useSnackbar();
+  const { showSnackbar } = useSnackbar();
   const { promptPreloaderValue } = usePromptPreloader();
   const isNormalLoad = navigation.state === 'loading' && !navigation.formData;
   const chatHistoryRef = useRef();
@@ -34,11 +34,11 @@ function App() {
 
   useEffect(() => {
     if (actionData?.conversationTitle) {
-      showSnacKbar({
+      showSnackbar({
         message: `Deleted '${actionData.conversationTitle}conversation'`
       })
     }
-  }, [actionData,showSnacKbar])
+  }, [actionData,showSnackbar])
 
   return (
     <React.Fragment>
