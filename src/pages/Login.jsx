@@ -22,7 +22,6 @@ function Login() {
             showSnackbar({
                 message: error.message,
                 type: 'error',
-                timeOut: Infinity
             })
         }
     }, [error, showSnackbar])
@@ -65,10 +64,10 @@ function Login() {
                             />
 
                             <div className='text-right'>
-                                <Link to='/reset-link' className='link text-labelLarge 
+                                {/* <Link to='/reset-link' className='link text-labelLarge 
                                 inline-block'>
                                     Forgot password?
-                                </Link>
+                                </Link> */}
                             </div>
 
                             <Button type='submit' disabled={navigation.state === 'submitting'}>
@@ -91,12 +90,6 @@ function Login() {
                             </Link>
 
                         </p>
-                  
-{
-    error ? <div className="p-2 rounded tracking-widest bg-light-errorContainer text-light-onErrorContainer">
-    {error}
-</div> :null
-}
                        
                     </div>
                     <p className="mt-auto mx-auto text-light-surfaceTint text-center

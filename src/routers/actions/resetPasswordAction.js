@@ -2,7 +2,7 @@ import { redirect } from "react-router-dom";
 import { account } from "../../lib/appwrite";
 
 
-const resetPassword = async ({ request }) => {
+const resetPasswordAction = async ({ request }) => {
 
     const formData = await request.formData();
     const url = new URL(request.url);
@@ -15,10 +15,13 @@ const resetPassword = async ({ request }) => {
         )
         return redirect('/login')
     } catch (err) {
+        console.log("resetPasswordAction".err);
+
         return {
+
             message:err.message
         }
     }
 }
 
-export default resetPassword
+export default resetPasswordAction;

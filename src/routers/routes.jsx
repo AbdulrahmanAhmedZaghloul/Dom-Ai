@@ -18,7 +18,7 @@ import appAction from "./actions/appAction";
 import { Conversation } from "../pages/Conversation";
 import { conversationLoader } from "./loaders/conversationLoader";
 import conversationAction from "./actions/conversationAction";
-import resetPassword from "./actions/resetPassword";
+import resetPasswordAction from "./actions/resetPasswordAction";
 import { ConversationError } from "../pages/ConversationError";
 import { RootError } from "../pages/RootError";
 
@@ -62,7 +62,7 @@ const router = createHashRouter([
         path: '/reset-password',
         element: <ResetPassword />,
         loader:resetPasswordLoaders,
-        action: resetPassword,
+        action: resetPasswordAction,
     },
 ])
 

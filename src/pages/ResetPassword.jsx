@@ -20,9 +20,9 @@ function ResetPassword() {
 
     useEffect(() => {
         if (error?.message) {
-            showSnackbar({ message: error.message, type: 'error' })
-        }
-    }, [error, showSnackbar])
+            showSnackbar({ message: error.message, type: 'error' });
+        };
+    }, [error, showSnackbar]);
 
     return (
         <React.Fragment>

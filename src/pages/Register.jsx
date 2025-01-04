@@ -74,11 +74,7 @@ function Register() {
                                 Sing in
                             </Link>
                         </p>
-                        {
-    error ? <div className="p-2 rounded tracking-widest bg-light-errorContainer text-light-onErrorContainer">
-    {error}
-</div> :null
-}
+  
                     </div>
                     <p className="mt-auto mx-auto text-light-surfaceTint text-center
                         dark:text-dark-surfaceTint text-bodyMedium lg:mx-0">

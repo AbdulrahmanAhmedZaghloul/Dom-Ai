@@ -14,19 +14,20 @@ import { Logo } from '../components/Logo'
 import { useSnackbar } from '../hooks/useSnackbar'
 function ResetLink() {
     const navigation = useNavigation();
-    const actionDate = useActionData();
+    
+    const actionData = useActionData();
 
     const { showSnackbar } = useSnackbar();
 
     useEffect(() => {
-        if (actionDate) {
+        if (actionData) {
             showSnackbar({
-                message: actionDate?.message,
-                type: actionDate.ok ? 'info' : 'error',
+                message: actionData?.message,
+                type: actionData.ok ? 'info' : 'error',
                 timeOut: 8000,
             });
-        }
-    }, [actionDate, showSnackbar])
+        };
+    }, [actionData, showSnackbar]);
 
     return (
         <React.Fragment>

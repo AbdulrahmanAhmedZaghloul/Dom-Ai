@@ -4,9 +4,9 @@ import { LinearProgress } from "../components/Progress";
 
 export const RootError = () => {
     const error = useRouteError();
+    
     const navigation = useNavigation();
     return (
-        <>
             <div className="h-dvh grid grid-col-1 justify-items-center content-center">
                 <p className="text-displayLarge">
                     {error.status}
@@ -28,10 +28,5 @@ export const RootError = () => {
                 )
             }
             </div>
-
-            
-        </>
-
-
     )
 }
